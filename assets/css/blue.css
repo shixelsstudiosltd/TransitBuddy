@@ -1,0 +1,66 @@
+/*Blue Theme*/
+
+.btn-blue{
+background-color: #51abdf;
+padding: 34px 19px;
+font-size: 17.5px;
+border: none;
+border-radius: 4px;
+width: 100%;
+}
+
+.btn-login{
+background:#51abdf url('../img/ok-icon.png') center no-repeat;
+margin-top: 20px;
+}
+
+.btn-fb{
+background: #3e5e99 url('../img/fb-login-icon.png') 30px 16px no-repeat;
+color:#fff;
+padding: 24px 19px;
+font-size: 13.5px;
+border: none;
+border-radius: 4px;
+width: 100%;
+}
+
+.register-div a{
+color:#fff;
+display: inline-block;
+}
+.register-div a:hover{
+color:#f1f1f1;
+text-decoration:none;
+}
+
+.register{
+background-color: #df6840;
+width: 300px;
+padding: 14px 29px 14px;
+margin: 20px auto 20px;
+border-radius: 2px;
+}
+
+.register p{
+font-weight:bold;
+font-size:23px;
+margin-top: 5px;
+}
+
+.copyright-admin{
+margin-top: 35px;
+color: #fff;
+font-size: 11px;
+}
+
+@media only screen and (max-width : 380px){
+.register{
+width: 240px;
+}
+}
+
+@media only screen and (max-width : 320px){
+.register{
+width: 160px;
+}
+}
