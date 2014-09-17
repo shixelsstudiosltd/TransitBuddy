@@ -1,0 +1,86 @@
+.dashboard-bg {
+	background: $gray2;
+	padding: 50px 0;
+	font-weight: 100 !important;
+}
+
+.dashboard {
+	border: 1px solid $dark-gray;
+	background: $white;
+	box-shadow: 0px 0px 2px $dark-gray;
+	padding: 0;
+	.dashboard-body {
+		float: right;
+		width: 90%;
+	}
+	.dashboard-nav {
+		float: left;
+		width: 10%;
+		.dashboard-nav-items {
+			list-style: none;
+			padding: 0;
+			text-align: center;
+			margin: 0;
+			li {
+				padding: 30px 15px;
+				background: $gray2;
+				border-bottom: 1px solid $dark-gray;
+				border-right:  1px solid $dark-gray;
+				cursor: pointer;
+				font-size: 2em;
+				color: $darker-gray;
+				.title {
+					font-size: 0.4em !important;
+				}
+				&:hover {
+					background: darken($gray2, 5%);
+				}
+				&.active {
+					background: $white;
+					border-right: none;
+				}
+				&.last {
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+.dashboard-top-nav {
+	height: 104px;
+	.pull-left {
+		width: 40%;
+		padding: 0 50px;
+		line-height: 100px;
+		.profile-pic {
+			width: 80px;
+		}
+		.greeting {
+			float: right;
+			line-height: 1em;
+			padding: 0 30px;
+			margin: 35px 0;
+			position: relative;
+			left: -30px;
+
+			.name {
+				color: $orange;
+			}
+		}
+	}
+}
+
+.dasboard-top-items {
+list-style: none;
+padding: 0;
+li {
+display: inline-block;
+text-align: center;
+padding: 30px;
+
+.value {
+	font-size: 1.5em;
+}
+}
+}

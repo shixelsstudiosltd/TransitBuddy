@@ -1,0 +1,130 @@
+/*----------------------------------------------------
+ * Copyright 2014 Pixelized Studio
+ * http://www.pixelized.cz
+ * Color Switcher
+ * color-switcher.css
+ *
+ * Version 2.0
+ * Released: 11.7.2014
+ * http://creativecommons.org/licenses/by/4.0/
+----------------------------------------------------*/
+/*------------------------------
+	COLOR SWITCHER
+------------------------------*/
+/* line 16, ../scss/color-switcher.scss */
+#color-switcher {
+  background-color: #FFFFFF;
+  padding: 15px;
+  position: fixed;
+  right: -231px;
+  top: 130px;
+  width: 230px;
+  z-index: 1000;
+  box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* line 27, ../scss/color-switcher.scss */
+#toggle-switcher {
+  background-color: #333333;
+  color: #FFFFFF;
+  font-size: 26px;
+  text-align: center;
+  position: absolute;
+  left: -46px;
+  top: 0;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  padding-top: 3px;
+}
+
+/* line 41, ../scss/color-switcher.scss */
+#color-switcher span {
+  color: #333333;
+  display: block;
+  font-weight: 700;
+}
+
+/* line 47, ../scss/color-switcher.scss */
+#color-switcher ul {
+  margin-bottom: 0;
+}
+
+/* line 51, ../scss/color-switcher.scss */
+#color-switcher ul li {
+  background-color: #000000;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 7px;
+  cursor: pointer;
+}
+
+/* line 59, ../scss/color-switcher.scss */
+#color-switcher ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* line 63, ../scss/color-switcher.scss */
+#color-switcher ul.list-inline {
+  margin: 5px 0 10px;
+}
+
+/* line 67, ../scss/color-switcher.scss */
+#color-switcher ul.list-inline:last-child {
+  margin: 5px 0 0;
+}
+
+/* line 71, ../scss/color-switcher.scss */
+#color-switcher ul.list-inline li {
+  margin: 0 2px;
+}
+
+/* line 75, ../scss/color-switcher.scss */
+#color-switcher ul li#blue {
+  background-color: #0D58A6;
+}
+
+/* line 76, ../scss/color-switcher.scss */
+#color-switcher ul li#green {
+  background-color: #01AE68;
+}
+
+/* line 77, ../scss/color-switcher.scss */
+#color-switcher ul li#orange {
+  background-color: #FFB23A;
+}
+
+/* line 78, ../scss/color-switcher.scss */
+#color-switcher ul li#red {
+  background-color: #B81117;
+}
+
+/* line 79, ../scss/color-switcher.scss */
+#color-switcher ul li#purple {
+  background-color: #880045;
+}
+
+/* line 80, ../scss/color-switcher.scss */
+#color-switcher ul li#light-blue {
+  background-color: #2FC3DF;
+}
+
+/* line 81, ../scss/color-switcher.scss */
+#color-switcher ul li#yellow {
+  background-color: #E8CA20;
+}
+
+/* line 82, ../scss/color-switcher.scss */
+#color-switcher ul li#pink {
+  background-color: #E84097;
+}
+
+/* line 83, ../scss/color-switcher.scss */
+#color-switcher ul li#light-green {
+  background-color: #BAD72F;
+}
+
+/* line 84, ../scss/color-switcher.scss */
+#color-switcher ul li#black {
+  background-color: #868686;
+}

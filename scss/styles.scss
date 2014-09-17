@@ -1,0 +1,33 @@
+/*---------------------------------------------------
+[Master Stylesheet]
+
+Project:	PrintShark
+Version:	1.1
+Created by:	Shixels Studios Ltd
+Primary use:	Page Used for Importing Stylesheets 
+----------------------------------------------------*/
+
+
+@import "variables";
+@import "bootstrap/bootstrap";
+@import "bootstrap/_bootstrap-compass";
+@import "bootstrap/_bootstrap-mincer";
+@import "bootstrap/_bootstrap-sprockets";
+@import "fontawesome/font-awesome";
+@import "home";
+@import "yamm";
+@import "owl.transitions";
+@import "owl.theme";
+@import "owl.carousels";
+@import "magnific-popup";
+@import "jquery.bootstrap-touchspin";
+@import "creative-brands";
+@import "color-switcher";
+@import "animate";
+@import "override";
+@import "color";
+@import "custom";
+
+@import "dashboard";
+@import "trips";
+

@@ -1,0 +1,93 @@
+/*-------------------------------------------------
+[Variables Stylesheet]
+
+Project:	Prayable App
+Version:	1.1
+Last change:	08/11/14 []
+Assigned to:	Earlie Clark, Muddassir Khanani
+Primary use:	Page used for common styles 
+				between pages 
+--------------------------------------------------*/
+
+
+
+/*------------------------------*\
+    $COLORS
+\*------------------------------*/
+
+$black: #000;
+$black-t: rgba(0,0,0,0.4);
+$white: #fff;
+$white-t: rgba(255,255,255,0.7);
+$light-gray: #EAEAEA;
+$gray: #D3D3D3;
+$gray2: #F2F2F2;
+$orange: #df683d;
+$dark-gray: #c8c8c8;
+$darker-gray: #333;
+$facebook: #456098;
+$twitter: #35A9DB;
+$blue: #3179b9;
+$d-blue: darken($blue,5%);
+$dk-blue: darken($blue,10%);
+$l-blue: lighten($blue,10%);
+$yellow: #ffde00;
+
+/*------------------------------*\
+    $STYLES
+\*------------------------------*/
+
+.body-container {
+	min-height: 100%;
+	height: auto;
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.bg-main {
+	background: url('../img/bg-login.png') no-repeat center fixed;
+	background-size: cover;
+	position: absolute;
+}
+
+.bg-input {
+	background: url('../img/bg-main.jpg') no-repeat center fixed;
+	background-size: cover;
+	position: absolute;
+}
+
+.bg-prayers {
+	background: url('../img/bg-prayers.jpg') no-repeat center fixed;
+	background-size: cover;
+	position: absolute;
+}
+
+.bg-home {
+	background: url('../img/bg-home.jpg') no-repeat center fixed;
+	background-size: cover;
+	position: absolute;
+}
+
+input[type="text"], input[type="password"], input[type="submit"] {
+			display: block;
+			width: 100%;
+			background: transparent;
+			color: $white;
+		}
+
+input[type="text"], input[type="password"] {
+	text-indent: 25px;
+	border-radius: 0 2px 2px 0;
+	border: 1px solid $white-t;
+}
+
+input[type="submit"] {
+	font-size: 16px;
+	font-weight: bolder;
+	color: $white;
+	padding: 12.5px 0;
+	border-radius: 3px;
+	margin-bottom: 22.5px;
+	border: 2px solid $white-t;
+}

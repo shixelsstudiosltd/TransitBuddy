@@ -1,0 +1,16 @@
+/* line 1, ../scss/trips.scss */
+table.table.table-striped {
+  position: relative;
+  top: 35px;
+}
+
+/* line 5, ../scss/trips.scss */
+.my-trips {
+  position: relative;
+}
+
+/* line 9, ../scss/trips.scss */
+.trip-button {
+  position: absolute;
+  right: 30px;
+}

@@ -1,0 +1,795 @@
+/*----------------------------------------------------
+ * Copyright 2014 Martin Kucharik
+ * http://www.pixelized.cz
+ * creative-brands.css
+ *
+ * Version 1.1
+ * Released: 9.6.2014
+ * http://creativecommons.org/licenses/by/4.0/
+----------------------------------------------------*/
+/*------------------------------
+	MAIN
+------------------------------*/
+/* line 15, ../scss/creative-brands.scss */
+.brands {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* line 20, ../scss/creative-brands.scss */
+.brands > li {
+  margin: 0 0 8px;
+}
+
+/*------------------------------
+	SIZES
+------------------------------*/
+/* line 28, ../scss/creative-brands.scss */
+.brands > li > a {
+  background-color: #ebebeb;
+  text-align: center;
+  color: #555555;
+  display: inline-block;
+  font-size: 20px;
+  padding-top: 11px;
+  width: 50px;
+  height: 50px;
+}
+
+/* line 39, ../scss/creative-brands.scss */
+.brands-tn > li > a {
+  font-size: 12px;
+  padding-top: 4px;
+  width: 25px;
+  height: 25px;
+}
+
+/* line 46, ../scss/creative-brands.scss */
+.brands-sm > li > a {
+  font-size: 16px;
+  padding-top: 6px;
+  width: 35px;
+  height: 35px;
+}
+
+/* line 53, ../scss/creative-brands.scss */
+.brands-md > li > a {
+  font-size: 18px;
+  padding-top: 8px;
+  width: 42px;
+  height: 42px;
+}
+
+/* line 60, ../scss/creative-brands.scss */
+.brands-lg > li > a {
+  font-size: 40px;
+  padding-top: 12px;
+  width: 80px;
+  height: 80px;
+}
+
+/* line 67, ../scss/creative-brands.scss */
+.brands-hg > li > a {
+  font-size: 60px;
+  padding-top: 13px;
+  width: 110px;
+  height: 110px;
+}
+
+/*------------------------------
+	COLORS
+------------------------------*/
+/* line 78, ../scss/creative-brands.scss */
+.brands-inverse > li > a {
+  background-color: #555555;
+  color: #ebebeb;
+}
+
+/* line 83, ../scss/creative-brands.scss */
+.brands-colored > li > a {
+  color: #ffffff;
+}
+
+/* line 87, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-adn {
+  background-color: #444444;
+}
+
+/* line 88, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-android {
+  background-color: #A4C639;
+}
+
+/* line 89, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-apple {
+  background-color: #000000;
+}
+
+/* line 90, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-bitbucket {
+  background-color: #205081;
+}
+
+/* line 91, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-btc {
+  background-color: #F89F37;
+}
+
+/* line 92, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-css3 {
+  background-color: #2177FF;
+}
+
+/* line 93, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-dribbble {
+  background-color: #F46899;
+}
+
+/* line 94, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-dropbox {
+  background-color: #3476E4;
+}
+
+/* line 95, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-facebook {
+  background-color: #3B5998;
+}
+
+/* line 96, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-flickr {
+  background-color: #FE0883;
+}
+
+/* line 97, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-foursquare {
+  background-color: #8FD400;
+}
+
+/* line 98, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-github {
+  background-color: #222222;
+}
+
+/* line 99, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-gittip {
+  background-color: #663300;
+}
+
+/* line 100, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-google-plus {
+  background-color: #C63D2D;
+}
+
+/* line 101, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-html5 {
+  background-color: #E44D26;
+}
+
+/* line 102, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-instagram {
+  background-color: #4E433C;
+}
+
+/* line 103, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-linkedin {
+  background-color: #4875B4;
+}
+
+/* line 104, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-linux {
+  background-color: #FFD133;
+}
+
+/* line 105, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-maxcdn {
+  background-color: #F7AC1B;
+}
+
+/* line 106, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-pagelines {
+  background-color: #135DA7;
+}
+
+/* line 107, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-pinterest {
+  background-color: #CB2027;
+}
+
+/* line 108, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-renren {
+  background-color: #005AAB;
+}
+
+/* line 109, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-skype {
+  background-color: #00ADF2;
+}
+
+/* line 110, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-stack-exchange {
+  background-color: #205296;
+}
+
+/* line 111, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-stack-overflow {
+  background-color: #D28A29;
+}
+
+/* line 112, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-trello {
+  background-color: #216884;
+}
+
+/* line 113, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-tumblr {
+  background-color: #2B4964;
+}
+
+/* line 114, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-twitter {
+  background-color: #33CCFF;
+}
+
+/* line 115, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-vimeo {
+  background-color: #86B32D;
+}
+
+/* line 116, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-vk {
+  background-color: #44678D;
+}
+
+/* line 117, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-weibo {
+  background-color: #D52B2A;
+}
+
+/* line 118, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-windows {
+  background-color: #00ADEF;
+}
+
+/* line 119, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-xing {
+  background-color: #005A5F;
+}
+
+/* line 120, ../scss/creative-brands.scss */
+.brands-colored > li > a.brands-youtube {
+  background-color: #FF3333;
+}
+
+/* line 122, ../scss/creative-brands.scss */
+.brands-transparent > li > a {
+  background-color: rgba(235, 235, 235, 0.4);
+}
+
+/* line 126, ../scss/creative-brands.scss */
+.brands-transparent-inverse > li > a {
+  background-color: rgba(85, 85, 85, 0.2);
+  color: #ebebeb;
+}
+
+/*------------------------------
+	SHAPES
+------------------------------*/
+/* line 135, ../scss/creative-brands.scss */
+.brands-rounded.brands-tn > li > a {
+  border-radius: 2px;
+}
+
+/* line 139, ../scss/creative-brands.scss */
+.brands-rounded.brands-sm > li > a {
+  border-radius: 4px;
+}
+
+/* line 143, ../scss/creative-brands.scss */
+.brands-rounded.brands-md > li > a {
+  border-radius: 5px;
+}
+
+/* line 147, ../scss/creative-brands.scss */
+.brands-rounded > li > a {
+  border-radius: 6px;
+}
+
+/* line 151, ../scss/creative-brands.scss */
+.brands-rounded.brands-lg > li > a {
+  border-radius: 8px;
+}
+
+/* line 155, ../scss/creative-brands.scss */
+.brands-rounded.brands-hg > li > a {
+  border-radius: 10px;
+}
+
+/* line 159, ../scss/creative-brands.scss */
+.brands-circle > li > a {
+  border-radius: 50%;
+}
+
+/*------------------------------
+	ANIMATION
+------------------------------*/
+/* line 167, ../scss/creative-brands.scss */
+.brands-spin > li > a:hover i {
+  animation: spin 0.5s linear;
+  -webkit-animation: spin 0.5s linear;
+}
+
+/* line 172, ../scss/creative-brands.scss */
+.brands-transition > li > a {
+  transition-duration: 0.5s;
+}
+
+/*------------------------------
+	STRUCTURE
+------------------------------*/
+/* line 180, ../scss/creative-brands.scss */
+.brands-justified > li {
+  display: table-cell;
+  width: 1%;
+  float: none;
+}
+
+/* line 186, ../scss/creative-brands.scss */
+.brands-justified > li > a {
+  width: 100%;
+}
+
+/* line 196, ../scss/creative-brands.scss */
+.brands-justified.brands-rounded.brands-tn > li > a,
+.brands-justified.brands-rounded.brands-sm > li > a,
+.brands-justified.brands-rounded.brands-md > li > a,
+.brands-justified.brands-rounded > li > a,
+.brands-justified.brands-rounded.brands-lg > li > a,
+.brands-justified.brands-rounded.brands-hg > li > a,
+.brands-justified.brands-circle > li > a {
+  border-radius: 0;
+}
+
+/* line 200, ../scss/creative-brands.scss */
+.brands-justified.brands-rounded.brands-tn > li:first-child > a {
+  border-radius: 2px 0 0 2px;
+}
+
+/* line 204, ../scss/creative-brands.scss */
+.brands-justified.brands-rounded.brands-tn > li:last-child > a {
+  border-radius: 0 2px 2px 0;
+}
+
+/* line 208, ../scss/creative-brands.scss */
+.brands-justified.brands-rounded.brands-sm > li:first-child > a {
+  border-radius: 4px 0 0 4px;
+}
+
+/* line 212, ../scss/creative-brands.scss */
+.brands-justified.brands-rounded.brands-sm > li:last-child > a {
+  border-radius: 0 4px 4px 0;
+}
+
+/* line 216, ../scss/creative-brands.scss */
+.brands-justified.brands-rounded.brands-md > li:first-child > a {
+  border-radius: 5px 0 0 5px;
+}
+
+/* line 220, ../scss/creative-brands.scss */
+.brands-justified.brands-rounded.brands-md > li:last-child > a {
+  border-radius: 0 5px 5px 0;
+}
+
+/* line 224, ../scss/creative-brands.scss */
+.brands-justified.brands-rounded > li:first-child > a {
+  border-radius: 6px 0 0 6px;
+}
+
+/* line 228, ../scss/creative-brands.scss */
+.brands-justified.brands-rounded > li:last-child > a {
+  border-radius: 0 6px 6px 0;
+}
+
+/* line 232, ../scss/creative-brands.scss */
+.brands-justified.brands-rounded.brands-lg > li:first-child > a {
+  border-radius: 8px 0 0 8px;
+}
+
+/* line 236, ../scss/creative-brands.scss */
+.brands-justified.brands-rounded.brands-lg > li:last-child > a {
+  border-radius: 0 8px 8px 0;
+}
+
+/* line 240, ../scss/creative-brands.scss */
+.brands-justified.brands-rounded.brands-hg > li:first-child > a {
+  border-radius: 10px 0 0 10px;
+}
+
+/* line 244, ../scss/creative-brands.scss */
+.brands-justified.brands-rounded.brands-hg > li:last-child > a {
+  border-radius: 0 10px 10px 0;
+}
+
+/* line 248, ../scss/creative-brands.scss */
+.brands-justified.brands-circle > li:first-child > a {
+  border-radius: 50% 0 0 50%;
+}
+
+/* line 252, ../scss/creative-brands.scss */
+.brands-justified.brands-circle > li:last-child > a {
+  border-radius: 0 50% 50% 0;
+}
+
+/* line 256, ../scss/creative-brands.scss */
+.brands-inline > li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* line 261, ../scss/creative-brands.scss */
+.brands-inline > li:last-child {
+  margin-right: 0;
+}
+
+/*------------------------------
+	HOVERS
+------------------------------*/
+/* line 269, ../scss/creative-brands.scss */
+.brands > li > a:hover {
+  color: #ffffff;
+}
+
+/* line 273, ../scss/creative-brands.scss */
+.brands > li > a.brands-adn:hover {
+  background-color: #444444;
+}
+
+/* line 274, ../scss/creative-brands.scss */
+.brands > li > a.brands-android:hover {
+  background-color: #A4C639;
+}
+
+/* line 275, ../scss/creative-brands.scss */
+.brands > li > a.brands-apple:hover {
+  background-color: #000000;
+}
+
+/* line 276, ../scss/creative-brands.scss */
+.brands > li > a.brands-bitbucket:hover {
+  background-color: #205081;
+}
+
+/* line 277, ../scss/creative-brands.scss */
+.brands > li > a.brands-btc:hover {
+  background-color: #F89F37;
+}
+
+/* line 278, ../scss/creative-brands.scss */
+.brands > li > a.brands-css3:hover {
+  background-color: #2177FF;
+}
+
+/* line 279, ../scss/creative-brands.scss */
+.brands > li > a.brands-dribbble:hover {
+  background-color: #F46899;
+}
+
+/* line 280, ../scss/creative-brands.scss */
+.brands > li > a.brands-dropbox:hover {
+  background-color: #3476E4;
+}
+
+/* line 281, ../scss/creative-brands.scss */
+.brands > li > a.brands-facebook:hover {
+  background-color: #3B5998;
+}
+
+/* line 282, ../scss/creative-brands.scss */
+.brands > li > a.brands-flickr:hover {
+  background-color: #FE0883;
+}
+
+/* line 283, ../scss/creative-brands.scss */
+.brands > li > a.brands-foursquare:hover {
+  background-color: #8FD400;
+}
+
+/* line 284, ../scss/creative-brands.scss */
+.brands > li > a.brands-github:hover {
+  background-color: #222222;
+}
+
+/* line 285, ../scss/creative-brands.scss */
+.brands > li > a.brands-gittip:hover {
+  background-color: #663300;
+}
+
+/* line 286, ../scss/creative-brands.scss */
+.brands > li > a.brands-google-plus:hover {
+  background-color: #C63D2D;
+}
+
+/* line 287, ../scss/creative-brands.scss */
+.brands > li > a.brands-html5:hover {
+  background-color: #E44D26;
+}
+
+/* line 288, ../scss/creative-brands.scss */
+.brands > li > a.brands-instagram:hover {
+  background-color: #4E433C;
+}
+
+/* line 289, ../scss/creative-brands.scss */
+.brands > li > a.brands-linkedin:hover {
+  background-color: #4875B4;
+}
+
+/* line 290, ../scss/creative-brands.scss */
+.brands > li > a.brands-linux:hover {
+  background-color: #FFD133;
+}
+
+/* line 291, ../scss/creative-brands.scss */
+.brands > li > a.brands-maxcdn:hover {
+  background-color: #F7AC1B;
+}
+
+/* line 292, ../scss/creative-brands.scss */
+.brands > li > a.brands-pagelines:hover {
+  background-color: #135DA7;
+}
+
+/* line 293, ../scss/creative-brands.scss */
+.brands > li > a.brands-pinterest:hover {
+  background-color: #CB2027;
+}
+
+/* line 294, ../scss/creative-brands.scss */
+.brands > li > a.brands-renren:hover {
+  background-color: #005AAB;
+}
+
+/* line 295, ../scss/creative-brands.scss */
+.brands > li > a.brands-skype:hover {
+  background-color: #00ADF2;
+}
+
+/* line 296, ../scss/creative-brands.scss */
+.brands > li > a.brands-stack-exchange:hover {
+  background-color: #205296;
+}
+
+/* line 297, ../scss/creative-brands.scss */
+.brands > li > a.brands-stack-overflow:hover {
+  background-color: #D28A29;
+}
+
+/* line 298, ../scss/creative-brands.scss */
+.brands > li > a.brands-trello:hover {
+  background-color: #216884;
+}
+
+/* line 299, ../scss/creative-brands.scss */
+.brands > li > a.brands-tumblr:hover {
+  background-color: #2B4964;
+}
+
+/* line 300, ../scss/creative-brands.scss */
+.brands > li > a.brands-twitter:hover {
+  background-color: #33CCFF;
+}
+
+/* line 301, ../scss/creative-brands.scss */
+.brands > li > a.brands-vimeo:hover {
+  background-color: #86B32D;
+}
+
+/* line 302, ../scss/creative-brands.scss */
+.brands > li > a.brands-vk:hover {
+  background-color: #44678D;
+}
+
+/* line 303, ../scss/creative-brands.scss */
+.brands > li > a.brands-weibo:hover {
+  background-color: #D52B2A;
+}
+
+/* line 304, ../scss/creative-brands.scss */
+.brands > li > a.brands-windows:hover {
+  background-color: #00ADEF;
+}
+
+/* line 305, ../scss/creative-brands.scss */
+.brands > li > a.brands-xing:hover {
+  background-color: #005A5F;
+}
+
+/* line 306, ../scss/creative-brands.scss */
+.brands > li > a.brands-youtube:hover {
+  background-color: #FF3333;
+}
+
+/*------------------------------
+	MEDIA QUERIES
+------------------------------*/
+@media (max-width: 767px) {
+  /* line 313, ../scss/creative-brands.scss */
+  .brands > li > a {
+    color: #ffffff;
+  }
+
+  /* line 315, ../scss/creative-brands.scss */
+  .brands > li > a.brands-adn {
+    background-color: #444444;
+  }
+
+  /* line 316, ../scss/creative-brands.scss */
+  .brands > li > a.brands-android {
+    background-color: #A4C639;
+  }
+
+  /* line 317, ../scss/creative-brands.scss */
+  .brands > li > a.brands-apple {
+    background-color: #000000;
+  }
+
+  /* line 318, ../scss/creative-brands.scss */
+  .brands > li > a.brands-bitbucket {
+    background-color: #205081;
+  }
+
+  /* line 319, ../scss/creative-brands.scss */
+  .brands > li > a.brands-btc {
+    background-color: #F89F37;
+  }
+
+  /* line 320, ../scss/creative-brands.scss */
+  .brands > li > a.brands-css3 {
+    background-color: #2177FF;
+  }
+
+  /* line 321, ../scss/creative-brands.scss */
+  .brands > li > a.brands-dribbble {
+    background-color: #F46899;
+  }
+
+  /* line 322, ../scss/creative-brands.scss */
+  .brands > li > a.brands-dropbox {
+    background-color: #3476E4;
+  }
+
+  /* line 323, ../scss/creative-brands.scss */
+  .brands > li > a.brands-facebook {
+    background-color: #3B5998;
+  }
+
+  /* line 324, ../scss/creative-brands.scss */
+  .brands > li > a.brands-flickr {
+    background-color: #FE0883;
+  }
+
+  /* line 325, ../scss/creative-brands.scss */
+  .brands > li > a.brands-foursquare {
+    background-color: #8FD400;
+  }
+
+  /* line 326, ../scss/creative-brands.scss */
+  .brands > li > a.brands-github {
+    background-color: #222222;
+  }
+
+  /* line 327, ../scss/creative-brands.scss */
+  .brands > li > a.brands-gittip {
+    background-color: #663300;
+  }
+
+  /* line 328, ../scss/creative-brands.scss */
+  .brands > li > a.brands-google-plus {
+    background-color: #C63D2D;
+  }
+
+  /* line 329, ../scss/creative-brands.scss */
+  .brands > li > a.brands-html5 {
+    background-color: #E44D26;
+  }
+
+  /* line 330, ../scss/creative-brands.scss */
+  .brands > li > a.brands-instagram {
+    background-color: #4E433C;
+  }
+
+  /* line 331, ../scss/creative-brands.scss */
+  .brands > li > a.brands-linkedin {
+    background-color: #4875B4;
+  }
+
+  /* line 332, ../scss/creative-brands.scss */
+  .brands > li > a.brands-linux {
+    background-color: #FFD133;
+  }
+
+  /* line 333, ../scss/creative-brands.scss */
+  .brands > li > a.brands-maxcdn {
+    background-color: #F7AC1B;
+  }
+
+  /* line 334, ../scss/creative-brands.scss */
+  .brands > li > a.brands-pagelines {
+    background-color: #135DA7;
+  }
+
+  /* line 335, ../scss/creative-brands.scss */
+  .brands > li > a.brands-pinterest {
+    background-color: #CB2027;
+  }
+
+  /* line 336, ../scss/creative-brands.scss */
+  .brands > li > a.brands-renren {
+    background-color: #005AAB;
+  }
+
+  /* line 337, ../scss/creative-brands.scss */
+  .brands > li > a.brands-skype {
+    background-color: #00ADF2;
+  }
+
+  /* line 338, ../scss/creative-brands.scss */
+  .brands > li > a.brands-stack-exchange {
+    background-color: #205296;
+  }
+
+  /* line 339, ../scss/creative-brands.scss */
+  .brands > li > a.brands-stack-overflow {
+    background-color: #D28A29;
+  }
+
+  /* line 340, ../scss/creative-brands.scss */
+  .brands > li > a.brands-trello {
+    background-color: #216884;
+  }
+
+  /* line 341, ../scss/creative-brands.scss */
+  .brands > li > a.brands-tumblr {
+    background-color: #2B4964;
+  }
+
+  /* line 342, ../scss/creative-brands.scss */
+  .brands > li > a.brands-twitter {
+    background-color: #33CCFF;
+  }
+
+  /* line 343, ../scss/creative-brands.scss */
+  .brands > li > a.brands-vimeo {
+    background-color: #86B32D;
+  }
+
+  /* line 344, ../scss/creative-brands.scss */
+  .brands > li > a.brands-vk {
+    background-color: #44678D;
+  }
+
+  /* line 345, ../scss/creative-brands.scss */
+  .brands > li > a.brands-weibo {
+    background-color: #D52B2A;
+  }
+
+  /* line 346, ../scss/creative-brands.scss */
+  .brands > li > a.brands-windows {
+    background-color: #00ADEF;
+  }
+
+  /* line 347, ../scss/creative-brands.scss */
+  .brands > li > a.brands-xing {
+    background-color: #005A5F;
+  }
+
+  /* line 348, ../scss/creative-brands.scss */
+  .brands > li > a.brands-youtube {
+    background-color: #FF3333;
+  }
+
+  /* line 350, ../scss/creative-brands.scss */
+  .brands-spin > li > a:hover i {
+    animation: none;
+    -webkit-animation: none;
+  }
+}
