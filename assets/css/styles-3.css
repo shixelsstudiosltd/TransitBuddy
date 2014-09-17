@@ -1679,3 +1679,61 @@ blockquote {
   text-align: center;
   color: #df683d;
 }
+.why-icon2 {
+  font-size: 1.5em;
+  text-align: center;
+  color: #df683d;
+}
+
+.why-icon3 {
+  font-size: 2em;
+  text-align: center;
+  color: #fff;
+  line-height: 60px;
+}
+
+.facebook-signup {
+width: 30%;
+margin: 0 auto;
+background: #344e86;
+height: 60px;
+margin-bottom: 30px;
+cursor: pointer; 
+border-radius: 10px;
+}
+
+.facebook-signup:hover {
+  background: #233865;
+}
+
+.clear {
+  clear: both;
+}
+
+.facebook-signup .why-icon3 {
+  color: #fff;
+}
+
+.mb {
+  margin-bottom: 30px;
+}
+
+.facebook-signup .icon {
+float: left;
+width: 20%;
+height: 100%;
+}
+
+.facebook-signup .title {
+float: right;
+width: 70%;
+line-height: 60px;
+margin: 0;
+color: #fff;
+text-align: left;
+font-size: 1.2em;
+}
+
+.why-icon2 i.fa.fa-text.fa-stack-1x.fa-inverse {
+font-size: 0.5em !important;
+}
