@@ -1670,3 +1670,12 @@ blockquote {
   }
 }
 /* Large devices (large desktops, 1200px and up) */
+
+.thumbnail {
+  text-align: center;
+}
+.why-icon {
+  font-size: 3em;
+  text-align: center;
+  color: #df683d;
+}
