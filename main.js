@@ -1,4 +1,4 @@
-var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate'])
+var TB = window.TB = sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate'])
     .config(['$routeProvider',function($routeProvider){
         $routeProvider
             .when('/',{
@@ -124,9 +124,4 @@ sampleApp.config(function ($translateProvider) {
 
 
 
-// sampleApp.controller('navController',function($rootScope,$scope,$location,$http,$cookies,$translate){
-//     $scope.changeLanguage = function (key) {
-//         $translate.use(key);
-//     };
 
-// });
