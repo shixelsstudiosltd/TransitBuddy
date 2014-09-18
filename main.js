@@ -41,9 +41,13 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate'])
                 templateUrl:'partials/settings.html',
                 controller:'settings'
             })
+            .when('/dashboard/transits',{
+                templateUrl:'partials/transits.html',
+                controller:'transits'
+            })
             .when('/dashboard',{
-                templateUrl:'partials/trips.html',
-                controller:'trips'
+                templateUrl:'partials/profile.html',
+                controller:'profile'
             })
 /*
             .when('/error',{

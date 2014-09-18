@@ -3,7 +3,10 @@
 	padding: 50px 0;
 	font-weight: 100 !important;
 }
-
+.dashboard-view {
+padding: 10px 30px;
+height: 83%;
+}
 .dashboard {
 	border: 1px solid $dark-gray;
 	background: $white;
@@ -12,6 +15,7 @@
 	.dashboard-body {
 		float: right;
 		width: 90%;
+		height: 620px;
 	}
 	.dashboard-nav {
 		float: left;
@@ -84,3 +88,22 @@ padding: 30px;
 }
 }
 }
+
+/* basic positioning */
+.legend {
+list-style: none;
+margin-top: 30px;
+position: absolute;
+left: 0;
+bottom: 0;
+padding: 0;
+text-align: center;
+width: 100%;
+}
+.legend li {margin-bottom: 10px;
+line-height: 15px; font-size: 0.9em; display: inline-block;width: 240px;
+&.wide {
+	width: 400px;
+ }
+}
+.legend span {  margin: 2px; width: 90px; display: inline-block; &.wide {width: 115px;}}

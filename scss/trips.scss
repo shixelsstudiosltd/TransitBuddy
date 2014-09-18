@@ -3,10 +3,17 @@ position: relative;
 top: 35px;
 }
 .my-trips {
+	height: 100%;
 	position: relative;
 }
 
 .trip-button {
 position: absolute;
-right: 30px;
+right: 0;
+}
+
+.trip-step-1 {
+margin: 0;
+padding: 30px;
+text-align: center;
 }

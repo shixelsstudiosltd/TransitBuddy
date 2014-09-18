@@ -1,6 +1,39 @@
 <div class="dashboard-bg">
 	<div class="dashboard container">
-		<div ng-include src="'partials/dashboard-nav.html'"></div>
+		<div class="dashboard-nav">
+	<ul class="dashboard-nav-items">
+		<a href="#/dashboard/profile">
+		<li class="dash-profile dash-nav">
+				<div class="fa fa-user"></div>
+				<div class="title">My Profile</div>
+			</li>
+		</a>
+		<a href="#/dashboard/trips">
+			<li class="dash-trips dash-nav">
+				<div class="fa fa-plane"></div>
+				<div class="title">My Trips</div>
+			</li>
+		</a>
+		<a href="#/dashboard/transits">
+			<li class="dash-transits dash-nav">
+				<div><img style="width:40px;" src="img/icon.png"></div>
+				<div class="title">My Transits</div>
+			</li>
+		</a>
+		<a href="#/dashboard/shipments">
+			<li class="dash-shipments dash-nav">
+				<div class="fa fa-cube"></div>
+				<div class="title">My Shipments</div>
+			</li>
+		</a>
+		<a href="#/dashboard/settings">
+			<li class="last dash-settings dash-nav">
+				<div class="fa fa-gears"></div>
+				<div class="title">My Settings</div>
+			</li>
+		</a>
+	</ul>
+</div>
 		<div class="dashboard-body">
 			<div ng-include src="'partials/dashboard-top-nav.html'"></div>
 			<div class="dashboard-view">

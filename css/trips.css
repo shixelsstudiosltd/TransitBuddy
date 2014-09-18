@@ -6,11 +6,19 @@ table.table.table-striped {
 
 /* line 5, ../scss/trips.scss */
 .my-trips {
+  height: 100%;
   position: relative;
 }
 
-/* line 9, ../scss/trips.scss */
+/* line 10, ../scss/trips.scss */
 .trip-button {
   position: absolute;
-  right: 30px;
+  right: 0;
+}
+
+/* line 15, ../scss/trips.scss */
+.trip-step-1 {
+  margin: 0;
+  padding: 30px;
+  text-align: center;
 }
