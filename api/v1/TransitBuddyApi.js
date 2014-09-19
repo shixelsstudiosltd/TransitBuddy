@@ -90,25 +90,25 @@
 	// 	});
 	// };
 
-	// exports.getUserById = function(request, response) {
-	// 	var id = request.params.id;
-	// 	transitBuddyDB.collection('tb_users', function(error, collection) {
-	// 		collection.findOne({'_id':new BSON.ObjectID(id)}, function(error, user) {
-	// 			if (error) {
-	// 				responsePackage.success = 0;
-	// 				responsePackage.data = {};
-	// 				responsePackage.data = {'error': error};
-	// 				response.send(responsePackage);
-	// 			} else {
-	// 				delete user.password;
-	// 				responsePackage.success = 1;
-	// 				responsePackage.data = {};
-	// 				responsePackage.data.user = user;
-	// 				response.send(responsePackage);
-	// 			}
-	// 		});
-	// 	});
-	// };
+	exports.getUserById = function(request, response) {
+		var id = request.params.id;
+		transitBuddyDB.collection('tb_users', function(error, collection) {
+			collection.findOne({'_id':new BSON.ObjectID(id)}, function(error, user) {
+				if (error) {
+					responsePackage.success = 0;
+					responsePackage.data = {};
+					responsePackage.data = {'error': error};
+					response.send(responsePackage);
+				} else {
+					delete user.password;
+					responsePackage.success = 1;
+					responsePackage.data = {};
+					responsePackage.data.user = user;
+					response.send(responsePackage);
+				}
+			});
+		});
+	 };
 
 	exports.verifyUserCredentials = function (request, response) {
 		var credentials = request.body;

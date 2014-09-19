@@ -39,7 +39,7 @@ sampleApp.controller('pricing',function($rootScope,$scope,$location){
         	e.preventDefault();
         	var in_ngn = parseInt($('.item-cost').text()) * 163.55;  //convert to naira
         	$('.item-cur').html('&#8358;');
-        	$('.item-cost').html(in_ngn.toFixed(2));
+        	$('.item-cost').html(in_ngn.toFixed(0));
         	$('.item-cost-ngn').addClass('hide');
         	$('.item-cost-doll').removeClass('hide');
 
@@ -49,7 +49,7 @@ sampleApp.controller('pricing',function($rootScope,$scope,$location){
         	e.preventDefault();
         	var in_doll = parseInt($('.item-cost').text()) / 163.55; //convert to dollars
         	$('.item-cur').html('$');
-        	$('.item-cost').html(in_doll.toFixed(2));
+        	$('.item-cost').html(in_doll.toFixed(0));
         	$('.item-cost-ngn').removeClass('hide');
         	$('.item-cost-doll').addClass('hide');
 
@@ -100,8 +100,9 @@ sampleApp.controller('pricing',function($rootScope,$scope,$location){
 
         		item_cost = item_weight_cost + speed_cost + type_cost + insure_cost; //calculate total cost to ship
         		
-        		$('.item-cost').html(item_cost);
+        		$('.item-cost').html(numberWithCommas(item_cost.toFixed(0)));
         		$('.item-pricing-signup').removeClass('hide');
+        		$('.item-cost-ngn').removeClass('hide');
         		$('.item-pricing-title').html('The price to transit your <strong>' +  $(".item-subcat option:selected").text() + '</strong> will be')
 
         		var temp_item = { //create a temporary item so user can finish setting up shipment if they sign up
@@ -121,4 +122,8 @@ sampleApp.controller('pricing',function($rootScope,$scope,$location){
 
         	}
         });
+
+		function numberWithCommas(x) {
+		     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		}
 })

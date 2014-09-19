@@ -44,7 +44,7 @@ server.configure(function () {
 // ======
  //USER ROUTES
     //==========
-    //app.get('/v1/users', api.getAllUsers); //get list of all users in system
+    server.get('/v1/users/:id', api.getUserById); //get list of all users in system
     //app.delete('/v1/user/remove/:id', api.deleteUser); //remove a user
     server.get('/v1/user/trips/:id', api.getUserTrips); //get a user by their id
     server.get('/v1/user/requests/:id', api.getUserRequests); //get a user by their id
