@@ -24,15 +24,22 @@
                 </div>
                 <div class="row">
                     <div class="container text-center">
-                        <form class="signup-form">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Email Address">
+                    <div class="login-error-modal alert alert-warning fade in hide" role="alert">
+                              <h4>Login Error!</h4>
+                              <p class="login-error"></p>
+                            </div>
+                        <form class="signup-form login-form">
+                        <div class="login-loader hide">
+                                <i class="fa fa-circle-o-notch fa-spin"></i>
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Password">
+                                <input type="text" class="form-control login-email" placeholder="Email Address">
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-cta btn-cta-primary">Login</button>
+                                <input type="password" class="form-control login-password" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-cta btn-cta-primary tb-login-button">Login</button>
                             </div>
                         </form><!--//signup-form-->
                 </div><!--//signup-->

@@ -9,6 +9,17 @@
 	line-height: 200%;
 	opacity: 0.5;
 }
+.login-loader {
+	width: 100%;
+	height: 101%;
+	display: block;
+	position: absolute;
+	background: $white;
+	color: $orange;
+	font-size: 9em;
+	line-height: 10%;
+	opacity: 0.5;
+}
 .reg-success {
 	width: 100%;
 	height: 101%;
@@ -17,7 +28,7 @@
 	background: $white;
 }
 
-.reg-form {
+.reg-form, .login-form {
 	position: relative;
 }
 

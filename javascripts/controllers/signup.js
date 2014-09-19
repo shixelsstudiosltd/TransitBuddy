@@ -18,12 +18,18 @@ sampleApp.controller('signup',function($rootScope,$scope,$location){
 			}
 			//check if everything is filled
 			else if ($('.reg-email').val() && $('.reg-fname').val() && $('.reg-lname').val() && $('.reg-phone').val() && $('.reg-pass').val() && $('.reg-rpass').val()){
+				if (sessionStorage.getItem('temp_item')) {
+					var temp_item = JSON.parse(sessionStorage.getItem('temp_item'));
+				} else {
+					temp_item = null;
+				}
 				var reg_user = {
 					email: $('.reg-email').val(),
 					fname: $('.reg-fname').val(),
 					lname: $('.reg-lname').val(),
 					phone: $('.reg-phone').val(),
 					password: $('.reg-pass').val(),
+					temp_item: temp_item
 				}
 				$('.reg-loader').removeClass('hide');
 				setTimeout( function() {

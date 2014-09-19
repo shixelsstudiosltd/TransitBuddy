@@ -46,7 +46,8 @@ server.configure(function () {
     //==========
     //app.get('/v1/users', api.getAllUsers); //get list of all users in system
     //app.delete('/v1/user/remove/:id', api.deleteUser); //remove a user
-    //app.get('/v1/user/:id', api.getUserById); //get a user by their id
+    server.get('/v1/user/trips/:id', api.getUserTrips); //get a user by their id
+    server.get('/v1/user/requests/:id', api.getUserRequests); //get a user by their id
     server.post('/v1/user/register', api.registerUser); //register a user
-    //app.post('/v1/user/verify_user', api.verifyUserCredentials); //login user// Start Node.js Server
+    server.post('/v1/user/verify_user', api.verifyUserCredentials); //login user// Start Node.js Server
 http.createServer(server).listen(port);

@@ -110,48 +110,48 @@
 	// 	});
 	// };
 
-	// exports.verifyUserCredentials = function (request, response) {
-	// 	var credentials = request.body;
+	exports.verifyUserCredentials = function (request, response) {
+		var credentials = request.body;
 
-	// 	if (credentials.email && credentials.password) {
-	// 		transitBuddyDB.collection('tb_users', function (error, collection) {
-	// 			collection.findOne({
-	// 				'email': credentials.email
-	// 			},
-	// 			function (error, user) {
-	// 				if (user && user.email) {
-	// 					bcrypt.compare(credentials.password, user.password, function(err, res) {
-	// 						if (err) {
-	// 							responsePackage.success = 0;
-	// 							responsePackage.data = {};
-	// 							responsePackage.data = {'error': err};
-	// 							response.send(responsePackage);
-	// 						}
+		if (credentials.email && credentials.password) {
+			transitBuddyDB.collection('tb_users', function (error, collection) {
+				collection.findOne({
+					'email': credentials.email
+				},
+				function (error, user) {
+					if (user && user.email) {
+						bcrypt.compare(credentials.password, user.password, function(err, res) {
+							if (err) {
+								responsePackage.success = 0;
+								responsePackage.data = {};
+								responsePackage.data = {'error': err};
+								response.send(responsePackage);
+							}
 
-	// 						if (res === true) {
-	// 							responsePackage.success = 1;
-	// 							responsePackage.data = {};
-	// 							responsePackage.data.user  = {};
-	// 							responsePackage.data.user.user_id = user._id;
-	// 							responsePackage.data.user.user_type = user.user_type;
-	// 							response.send(responsePackage);
-	// 						} else {
-	// 							responsePackage.success = 0;
-	// 							responsePackage.data = {};
-	// 							responsePackage.data = {'error': 'Email and password do not match!'};
-	// 							response.send(responsePackage);
-	// 						}
-	// 					});
-	// 				} else {
-	// 					responsePackage.success = 0;
-	// 					responsePackage.data = {};
-	// 					responsePackage.data = {'error': 'user not found!'};
-	// 					response.send(responsePackage);
-	// 				}
-	// 			});
-	// 		});
-	// 	}
-	// };
+							if (res === true) {
+								responsePackage.success = 1;
+								responsePackage.data = {};
+								responsePackage.data.user  = {};
+								responsePackage.data.user.user_id = user._id;
+								responsePackage.data.user.user_type = user.user_type;
+								response.send(responsePackage);
+							} else {
+								responsePackage.success = 0;
+								responsePackage.data = {};
+								responsePackage.data = {'error': 'Email and password do not match!'};
+								response.send(responsePackage);
+							}
+						});
+					} else {
+						responsePackage.success = 0;
+						responsePackage.data = {};
+						responsePackage.data = {'error': 'user not found!'};
+						response.send(responsePackage);
+					}
+				});
+			});
+		}
+	};
 
 	exports.registerUser = function (request, response) {
 		var registerdUser = request.body;
@@ -178,6 +178,7 @@
 							}
 							registerdUser.password = hash; //overwrite password entered with hashed and salted version
 							registerdUser.is_verified = false;
+							registerdUser.has_loggedin = false;
 							//add registerdUser to database with hashed password
 							transitBuddyDB.collection('tb_users', function (error, collection) {
 								collection.insert(registerdUser, {safe: true}, function (error, result) {
@@ -251,24 +252,49 @@
 	// 	});
 	// };
 
-	// exports.getUserTasks = function(request, response) {
-	// 	var id = request.params.id;
-	// 	transitBuddyDB.collection('tb_users', function(error, collection) {
-	// 		collection.findOne({'_id':new BSON.ObjectID(id)}, function(error, user) {
-	// 			if (error) {
-	// 				responsePackage.success = 0;
-	// 				responsePackage.data = {};
-	// 				responsePackage.data = {'error': error};
-	// 				response.send(responsePackage);
-	// 			} else {
-	// 				responsePackage.success = 1;
-	// 				responsePackage.data = {};
-	// 				responsePackage.data.userTasks = user.tasks;
-	// 				response.send(responsePackage);
-	// 			}
-	// 		});
-	// 	});
-	// };
+	exports.getUserRequests = function(request, response) {
+		var id = request.params.id;
+		mockitbrdDB.collection('tb_requests', function (error, collection) {
+		collection.find({'user': new BSON.ObjectID(data.id) }).toArray(function (error, requests) {
+			if (error) {
+				responsePackage.success = 0;
+				responsePackage.data = {};
+				responsePackage.data = {'error': error};
+				response.send(responsePackage);
+			} else {
+				responsePackage.success = 1;
+				responsePackage.data = {};
+				responsePackage.data.requests = requests;
+				response.send(responsePackage);
+			}
+		});
+		});
+	};
+
+
+	exports.getUserTrips = function(request, response) {
+		var id = request.params.id;
+		mockitbrdDB.collection('tb_trips', function (error, collection) {
+		collection.find({'user': new BSON.ObjectID(data.id) }).toArray(function (error, requests) {
+			if (error) {
+				responsePackage.success = 0;
+				responsePackage.data = {};
+				responsePackage.data = {'error': error};
+				response.send(responsePackage);
+			} else {
+				responsePackage.success = 1;
+				responsePackage.data = {};
+				responsePackage.data.requests = requests;
+				response.send(responsePackage);
+			}
+		});
+		});
+	};
+
+
+
+
+
 
 
 

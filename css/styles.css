@@ -20358,6 +20358,19 @@ blockquote {
 }
 
 /* line 12, ../scss/signup.scss */
+.login-loader {
+  width: 100%;
+  height: 101%;
+  display: block;
+  position: absolute;
+  background: white;
+  color: #df683d;
+  font-size: 9em;
+  line-height: 10%;
+  opacity: 0.5;
+}
+
+/* line 23, ../scss/signup.scss */
 .reg-success {
   width: 100%;
   height: 101%;
@@ -20366,12 +20379,12 @@ blockquote {
   background: white;
 }
 
-/* line 20, ../scss/signup.scss */
-.reg-form {
+/* line 31, ../scss/signup.scss */
+.reg-form, .login-form {
   position: relative;
 }
 
-/* line 24, ../scss/signup.scss */
+/* line 35, ../scss/signup.scss */
 .reg-s-icon {
   font-size: 10em;
   color: #df683d;
