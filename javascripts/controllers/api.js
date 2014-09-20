@@ -58,9 +58,11 @@ $(document).ready(function() {
         session: function(user) {
         	var user_session = {user_id: user};
         	sessionStorage.setItem('user_session', JSON.stringify(user_session)); //store temporary item into session storage 
-        	TB.user = function() {
-        		return TB.api.user(user_session.user_id);
-        	}
+        	
+        },
+        current: function() {
+            user_id = JSON.parse(sessionStorage.getItem('user_session')).user_id;
+            return  TB.api.user(user_id);
         },
         user: function(user_id) {
         	var send = null;
@@ -78,6 +80,30 @@ $(document).ready(function() {
             });
 
             return send;
+        },
+        generate_tracker: function(account_id, delivery_speed) {
+            var date = new Date().getTime();
+            var tracking_format = 'TB' + account_id + delivery_speed + '4xxxxxxy';
+            var tracking_number = tracking_format.replace(/[xy]/g, function(variants) {
+                var rand = (date + Math.random()*16)%16 | 0;
+                date = Math.floor(date/16);
+                var id = (variants == 'x' ? rand : (rand&0x7|0x8)).toString(16);
+                id = id.toUpperCase();
+                return id;
+            });
+            return tracking_number;
+        },
+        generate_account_id : function () {
+            var date = new Date().getTime();
+            var id_format = 'xxxxxx';
+            var account_id = id_format.replace(/[xy]/g, function(variants) {
+                var rand = (date + Math.random()*16)%16 | 0;
+                date = Math.floor(date/16);
+                var id = (variants == 'x' ? rand : (rand&0x7|0x8)).toString(16);
+                id = id.toUpperCase();
+                return id;
+            });
+            return account_id;
         }
     };
 

@@ -89,26 +89,47 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
     <div class="row trip-step-1">
-	      <h1>Step 1. Get Flight</h1>
-	       <form class="signup-form">
-	            <div class="form-group">
-	                <input type="text" class="form-control" placeholder="Flight/Tail # e.g. DL55">
-	            </div>
-	       		<div class="why-icon2 mb">
-		            <span class="fa-stack fa-lg">
-		              <i class="fa fa-circle fa-stack-2x"></i>
-		              <i class="fa fa-text fa-stack-1x fa-inverse">OR</i>
-		            </span>
-	            </div>
-	            <div class="form-group">
-	            	<label>Origin</label>
-	                <input type="text" class="form-control" placeholder="City or Airport Code">
-	                <label>Destination</label>
-	                <input type="text" class="form-control" placeholder="City or Airport Code">
-	            </div>
-	            <div class="form-group">
-	                <button type="submit" class="btn btn-cta btn-cta-primary">Next</button>
-	            </div>
+	      
+	       <form class="shipment-form">
+	       		<div class="ship-step-1">
+		           <div class="content">
+		           		<h2>Step 1. Item Information</h2>
+		           		<div class="form-group">
+		           			
+		           		</div>
+                           <div class="form-group">
+                                <label>Item Category</label>
+                               <select class="form-control item-cat">
+                                    <option selected="true">Select a Category</option>
+                                    <option val="Electronics">Electronics</option>
+                                    <option val="Clothing">Clothing</option>
+                                    <option val="Shoes">Shoes</option>
+                                    <option val="Books">Books</option>
+                                    <option val="Beauty">Hair &amp; Beauty</option>
+                               </select>
+                           </div>
+                           <div class="form-group">
+                                <label>Item Subcategory</label>
+                               <select class="form-control item-subcat">
+                                    <option selected="true">Selecte a Category Above</option>
+                               </select>
+                           </div>
+                           
+                            <div class="form-group">
+                                <label>Item Weight (lbs)</label>
+                               <input type="text" class="form-control item-lbs" placeholder="e.g. 2.5">
+                               <h4> (<span class="item-kg-calc">0.0</span> kg)</h4>
+                           </div>
+                           <div class="form-group">
+                                <label>Is your item insured?</label>
+                               <select class="form-control item-insure">
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                               </select>
+                           </div>
+                           <button class="btn btn-primary">Next</button>
+                        </div><!--//content-->
+		        </div>
 	        </form><!--//signup-form-->
 	    </div>
     </div>

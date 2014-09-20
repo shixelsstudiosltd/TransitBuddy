@@ -66,7 +66,10 @@ sampleApp.controller('pricing',function($rootScope,$scope,$location){
         			item_weight = parseInt($('.item-lbs').val()),
         			item_insured = parseInt($('.item-insure').val()),
         			item_cost = 0,
-        			insure_cost = 0;
+        			insure_cost = 0,
+                    fuel_surcharge = 0.45,
+                    pickup_fee = 0,
+                    buddy_pay = 0;
 
         		if (item_speed === 0) { //if 24-48 hours
         			speed_cost = 50;
@@ -86,6 +89,24 @@ sampleApp.controller('pricing',function($rootScope,$scope,$location){
         		} else { //all small items
         			type_cost = 3.15;
         		}
+                if (item_type === 0) { //if very large item
+                    pickup_fee = 25; 
+                } else if (item_type === 1) { //if large item
+                    pickup_fee = 17.50;
+                } else if (item_type === 2) { //if medium item
+                    pickup_fee = 12.25;
+                } else { //all small items
+                    pickup_fee = 8.15;
+                }
+                if (item_type === 0) { //if very large item
+                    buddy_pay = 25; 
+                } else if (item_type === 1) { //if large item
+                    buddy_pay = 17.50;
+                } else if (item_type === 2) { //if medium item
+                    buddy_pay = 12.25;
+                } else { //all small items
+                    buddy_pay = 8.15;
+                }
         		if (item_insured === 0 && item_type === 0) { //if very large item and not insured
         			insure_cost = 16.70;
         		} else  if (item_insured === 0 && item_type === 1){ //if large item and not insured
@@ -95,12 +116,18 @@ sampleApp.controller('pricing',function($rootScope,$scope,$location){
         		} else { //if small item and not insured or if any of the items are insured
         			insure_cost = 5;
         		} 
-        		console.log((item_weight * 2.75) , speed_cost , type_cost , insure_cost);
         		var item_weight_cost = item_weight * 2.75; //$2.75 charge per pound
+                item_cost = item_weight_cost + speed_cost + type_cost + insure_cost; //calculate total cost to ship
+                var fuel_surcharge_cost = item_cost * fuel_surcharge;
+                var total_cost = item_cost + fuel_surcharge_cost + pickup_fee;
 
-        		item_cost = item_weight_cost + speed_cost + type_cost + insure_cost; //calculate total cost to ship
+                var courier_fee = (fuel_surcharge_cost + pickup_fee) / 2;
+                var our_fee = total_cost - courier_fee - insure_cost - buddy_pay;
+
+                console.log('courier_fee: ', courier_fee, 'buddy_pay: ', buddy_pay, ' our_fee: ', our_fee, 'insure_cost: ', insure_cost);
+
         		
-        		$('.item-cost').html(numberWithCommas(item_cost.toFixed(0)));
+        		$('.item-cost').html(numberWithCommas(total_cost.toFixed(0)));
         		$('.item-pricing-signup').removeClass('hide');
         		$('.item-cost-ngn').removeClass('hide');
         		$('.item-pricing-title').html('The price to transit your <strong>' +  $(".item-subcat option:selected").text() + '</strong> will be')
