@@ -21,7 +21,7 @@ sampleApp.controller('login',function($rootScope,$scope,$location){
 	       			var login_token = TB.api.login(login_user);
 	       			if (login_token.success === 1) {	
 	       				$location.path('/dashboard');
-	       				if(!$scope.$$phase) $scope.$apply()
+	       				if(!$scope.$$phase) $scope.$apply();
 	       			} else {
 	       				 $('.login-error').html(login_token.data.error);
 						$('.login-error-modal').removeClass('hide');

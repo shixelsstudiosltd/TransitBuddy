@@ -35,7 +35,35 @@
 	</ul>
 </div>
 		<div class="dashboard-body">
-			<div ng-include src="'partials/dashboard-top-nav.html'"></div>
+			<div class="dashboard-top-nav">
+				<div class="pull-left">
+						<img class="profile-pic" src="../img/people/people-2.png">
+						<span class="greeting">
+							<p>Good Morning, <span ng-model="curent_user.personal.fname">{{curent_user.personal.fname}}</span></p>
+							<p><a href="#">Change Picture</a></p>
+						</span>
+				</div>
+				<div class="pull-right">
+					<ul class="dasboard-top-items">
+						<li>
+							<div class="value">2</div>
+							<div>Trip(s)</div>
+						</li>
+						<li>
+							<div class="value">5</div>
+							<div>Shipment(s)</div>
+						</li>
+						<li>
+							<div class="value">2</div>
+							<div>Request(s)</div>
+						</li>
+						<li>
+							<div class="value">$234.56</div>
+							<div>Earned</div>
+						</li>
+					</ul>
+				</div>
+			</div>
 			<div class="dashboard-view">
 			<div class="alert alert-info fade in" role="alert">
 			      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>

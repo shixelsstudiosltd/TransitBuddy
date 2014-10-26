@@ -53,6 +53,14 @@ var TB = window.TB = sampleApp = angular.module("myApp",['ngCookies','pascalprec
                 templateUrl:'partials/payments.html',
                 controller:'payments'
             })
+            .when('/dashboard/requests/:id', {
+                templateUrl: 'partials/request',
+                controller: 'request'
+            })
+            .when('/dashboard/requests', {
+                templateUrl: 'partials/requests',
+                controller: 'requesst'
+            })
 /*
             .when('/error',{
                 templateUrl:'views/error.html'

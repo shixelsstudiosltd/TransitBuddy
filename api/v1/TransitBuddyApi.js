@@ -21,7 +21,7 @@
 		port: 27017,
 		user: 'admin',
 		pass: 'TBAdmin',
-		envDB: 'TransitBuddy',
+		envDB: 'TransitBuddy'
 	};
 	var responsePackage = {
 		success: null,
@@ -116,11 +116,12 @@
 		if (credentials.email && credentials.password) {
 			transitBuddyDB.collection('tb_users', function (error, collection) {
 				collection.findOne({
-					'email': credentials.email
+					'account.email': credentials.email
 				},
 				function (error, user) {
-					if (user && user.email) {
-						bcrypt.compare(credentials.password, user.password, function(err, res) {
+					console.log(credentials.password, " ", user.account.password);
+					if (user && user.account.email) {
+						bcrypt.compare(credentials.password, user.account.password, function(err, res) {
 							if (err) {
 								responsePackage.success = 0;
 								responsePackage.data = {};
@@ -133,7 +134,6 @@
 								responsePackage.data = {};
 								responsePackage.data.user  = {};
 								responsePackage.data.user.user_id = user._id;
-								responsePackage.data.user.user_type = user.user_type;
 								response.send(responsePackage);
 							} else {
 								responsePackage.success = 0;
@@ -145,7 +145,7 @@
 					} else {
 						responsePackage.success = 0;
 						responsePackage.data = {};
-						responsePackage.data = {'error': 'user not found!'};
+						responsePackage.data = {'error': 'Oops! There is no account with that email!'};
 						response.send(responsePackage);
 					}
 				});
@@ -158,10 +158,10 @@
 
 		transitBuddyDB.collection('tb_users', function (error, collection) {
 			collection.findOne({
-				'email': registerdUser.email
+				'account.email': registerdUser.account.email
 			},
 			function (error, existingUser) {
-				if (existingUser && existingUser.email) { //if user exists
+				if (existingUser && existingUser.account.email) { //if user exists
 					responsePackage.success = 0;
 					responsePackage.data = {};
 					responsePackage.data = {'code': 'TBREG101', 'error': 'An account already exisits for this email address, '};
@@ -169,16 +169,16 @@
 				} else { //if user doesn't exist create them
 					//salt password
 					bcrypt.genSalt(10, function(er) {
-						bcrypt.hash(registerdUser.password, null, null, function(err, hash) {
+						bcrypt.hash(registerdUser.account.password, null, null, function(err, hash) {
 							if (er) {
 								responsePackage.success = 0;
 								responsePackage.data = {};
 								responsePackage.data = {'code': 'TBREG102', 'error': er};
 								response.send(responsePackage);
 							}
-							registerdUser.password = hash; //overwrite password entered with hashed and salted version
-							registerdUser.is_verified = false;
-							registerdUser.has_loggedin = false;
+							registerdUser.account.password = hash; //overwrite password entered with hashed and salted version
+							registerdUser.account.is_verified = false;
+							registerdUser.account.has_loggedin = false;
 							//add registerdUser to database with hashed password
 							transitBuddyDB.collection('tb_users', function (error, collection) {
 								collection.insert(registerdUser, {safe: true}, function (error, result) {
